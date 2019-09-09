@@ -1,0 +1,19 @@
+//Pad解析度
+@mixin Pad
+	@media(max-width: 768px)
+		@content
+
+//Pad以下的解析度
+@mixin under-Pad
+	@media(max-width: 767px)
+		@content
+
+//iphone5
+@mixin iphone5
+	@media(max-width: 320px)
+		@content
+
+//index避免文字破版解析度
+@mixin avoidbreak
+	@media(max-width: 940px)
+		@content

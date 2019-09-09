@@ -1,0 +1,743 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: 微軟正黑體;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/*css reset end*/
+/*pure.css製作登入表單*/
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]):focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
+    outline: thin solid #129FEA;
+    outline: 1px auto #129FEA;
+}
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
+.pure-form select[disabled],
+.pure-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+    background-color: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.pure-form input:focus:invalid,
+.pure-form textarea:focus:invalid,
+.pure-form select:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+}
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+.pure-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.pure-form select[multiple] {
+    height: auto;
+}
+.pure-form label {
+    margin: 0.5em 0 0.2em;
+}
+.pure-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+.pure-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.pure-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.pure-form-aligned .pure-control-group {
+    margin-bottom: 0.5em;
+}
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.pure-form-aligned .pure-controls {
+    margin: 1.5em 0 0 11em;
+}
+
+/* Rounded Inputs */
+.pure-form input.pure-input-rounded,
+.pure-form .pure-input-rounded {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+.pure-form .pure-group fieldset {
+    margin-bottom: 10px;
+}
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+    z-index: 3;
+}
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+.pure-form .pure-group button {
+    margin: 0.35em 0;
+}
+
+.pure-form .pure-input-1 {
+    width: 100%;
+}
+.pure-form .pure-input-3-4 {
+    width: 75%;
+}
+.pure-form .pure-input-2-3 {
+    width: 66%;
+}
+.pure-form .pure-input-1-2 {
+    width: 50%;
+}
+.pure-form .pure-input-1-3 {
+    width: 33%;
+}
+.pure-form .pure-input-1-4 {
+    width: 25%;
+}
+
+/* Inline help for forms */
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: #666;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.pure-form-message {
+    display: block;
+    color: #666;
+    font-size: 0.875em;
+}
+
+@media only screen and (max-width : 480px) {
+    .pure-form button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+    .pure-form input:not([type]),
+    .pure-form input[type="text"],
+    .pure-form input[type="password"],
+    .pure-form input[type="email"],
+    .pure-form input[type="url"],
+    .pure-form input[type="date"],
+    .pure-form input[type="month"],
+    .pure-form input[type="time"],
+    .pure-form input[type="datetime"],
+    .pure-form input[type="datetime-local"],
+    .pure-form input[type="week"],
+    .pure-form input[type="number"],
+    .pure-form input[type="search"],
+    .pure-form input[type="tel"],
+    .pure-form input[type="color"],
+    .pure-form label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+
+    .pure-group input:not([type]),
+    .pure-group input[type="text"],
+    .pure-group input[type="password"],
+    .pure-group input[type="email"],
+    .pure-group input[type="url"],
+    .pure-group input[type="date"],
+    .pure-group input[type="month"],
+    .pure-group input[type="time"],
+    .pure-group input[type="datetime"],
+    .pure-group input[type="datetime-local"],
+    .pure-group input[type="week"],
+    .pure-group input[type="number"],
+    .pure-group input[type="search"],
+    .pure-group input[type="tel"],
+    .pure-group input[type="color"] {
+        margin-bottom: 0;
+    }
+
+    .pure-form-aligned .pure-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .pure-form-aligned .pure-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+    .pure-form .pure-help-inline,
+    .pure-form-message-inline,
+    .pure-form-message {
+        display: block;
+        font-size: 0.75em;
+        /* Increased bottom padding to make it group with its related input element. */
+        padding: 0.2em 0 0.8em;
+    }
+}
+/*pure.css end*/
+/*wrap設計*/
+.wrap{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*清除浮動*/
+.clearfix{
+    clear: both;
+}
+/*回到頂部設計*/
+.gototop{
+    width: 64px;
+    height: 64px;
+    background-image: url('../img/gototop.png');
+    background-repeat: no-repeat;
+    position: fixed;
+    right:3% ;
+    bottom: 0;
+    z-index: 9999999;
+}
+.gototop:hover{
+    cursor: pointer;
+}
+@media(max-width:767px){
+    .gototop{
+        background-image: url('../img/gototop-m.png');
+    }
+}
+/*topcontent設計*/
+.topcontent{
+    background-image: url('../img/header_desktop.png');
+    max-width:1000px;
+    height: 420px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*header設計*/
+.header{
+    position: relative;
+    height: 68px;
+    background: rgba(0,0,0,0.75);
+}
+.title{
+    display:inline-block;
+    background-image: url('../img/logo_w@svg.svg');
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 120px;
+    height: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 42px;
+}
+.topmenu{
+    float: right;
+}
+.topmenu li{
+    float: left;
+    margin-right: 31px;
+    margin-top: 18px;
+}
+.topmenu li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.topmenu li a:hover{
+    color: #f08080;
+}
+.hamburger{
+    margin-top: 16px;
+    margin-right: 16px;
+    float: right;
+    display: none;
+ }
+
+ /*banner設計*/
+.banner{
+    background: rgba(0,0,0,0.35);
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 1em;
+    margin-top: 67px;
+}
+
+.banner h2{
+    text-align: center;
+    color: white;
+    font-size: 36px;
+}
+.banner p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.banner span{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*topcontent RWD設計*/
+@media(max-width:768px)/*pad解析度製作漢堡選單*/{
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: black;
+        z-index: 9999999;
+    }
+    .hamburger{
+        display: inline-block;
+    }
+    .topcontent{
+        background-image: url('../img/header_mobile.png');
+        background-size: cover;
+    }
+    .topmenu{
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.5s;
+        background: black;
+        position: absolute;
+        z-index: 100;
+        top:56px;
+        left: 0;
+        right: 0;
+        float: left;
+    }
+    .topmenu li{
+        border-bottom: 1px white dashed;
+       float: none;
+    }
+    .topmenu li a{
+        margin-left: 5px;
+       padding-bottom: 5px;
+    }
+    .topmenu li a:focus{
+        color: #f08080;
+    }
+    .topmenu li a:hover{
+        color:white;
+    }
+    .banner{
+        padding-top: 68px;
+    }
+    
+
+    
+}
+
+/*jquery點擊漢堡icon新增class達到menu顯示效果*/
+.topmenu-show{
+    max-height:500px;
+}
+/*content設計*/
+.content{
+    background: #efeae7;
+    padding-bottom: 15px;
+}
+.content h2{
+    text-align: center;
+    color: #3d1101;
+    font-size: 48px;
+    font-weight: 900;
+    padding-top:50px;
+    line-height:0.5;
+   padding-bottom: 35px;
+}
+.content h2 span{
+    font-size: 20px;
+    font-weight:900;
+}
+/*中間登入表單設計*/
+.login-form{
+    max-width: 300px;
+    margin: 0 auto;
+    color: #3d1101;
+    font-size: 16px;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    border-top: #ff5e45 3px solid;
+}
+.login-form .login-title{
+    margin-top: 15px;
+    color: #3d1101;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 800;
+}
+.login-form .pure-form-stacked label{
+    margin-top: 16px;
+    margin-left: 5%;
+}
+.login-form .pure-form-stacked .login-form-email,.login-form .pure-form-stacked .login-form-password{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-left: 8.888%;
+}
+.login-form .pure-form-stacked .login-form-email{
+    background-image: url('../img/mail.png');
+    background-repeat: no-repeat;
+    background-position: 9px center;
+}
+.login-form .pure-form-stacked .login-form-password{
+    background-image: url('../img/lock.png');
+    background-repeat: no-repeat;
+    background-position: 9px center;
+}
+
+.login-form .forget{
+    margin-left: 5%;
+    font-size: 14px;
+    color: #ff5e45;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 30px;
+}
+.login-form .btn-box{
+     max-width: 300px;
+     text-align:center;
+}
+.login-form button{
+    width:125px;
+    border-style: none;
+    font-size: 14px;
+    color: white;
+    padding: 6px 0;
+}
+.login-form button:hover{
+    cursor: pointer;
+}
+.login-form .register-btn{
+    background: gray;
+    margin-right: 6.6666%;
+}
+.login-form .register-btn a{
+    text-decoration: none;
+    color: white;
+}
+.login-form .register-btn:hover{
+    box-shadow: 1px 4px 3px gray;
+}
+.login-form .login-btn{
+    background: #F56C23;
+}
+.login-form .login-btn:hover{
+    box-shadow: 1px 4px 3px #f56c23;
+}
+
+/*footer設計*/
+.footer{
+    padding-left: 4%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background: #efeae7;
+}
+.social{
+    text-align: right;
+    padding-right: 4.2%;
+}
+.footer .logo{
+   margin-bottom: 22px;
+}
+.footer a{
+    margin-left: 1.2%;
+}
+.footer p{
+    line-height: 1.5;
+    font-size: 16px;
+    color: #3d1101;
+}
+.aboutUS h2,.contact h2{
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #3d1101;
+}
+.aboutUS {
+    float: left;
+    width: 30%;
+}
+.contact{
+    margin-left: 3%;
+    float: left;
+}
+/*footer RWD設計*/
+@media(max-width:767px){
+    .aboutUS{
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+    .contact{
+        margin-left: 0;
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+}
